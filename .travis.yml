@@ -1,5 +1,7 @@
 language: node_js
 node_js:
   - 'node'
+before_install:
+  - sudo apt-get -y install cargo
 after_success:
   - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'

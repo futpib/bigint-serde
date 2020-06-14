@@ -1,20 +1,24 @@
 {
-  "name": "TODO",
+  "name": "bigint-serde",
+  "description": "JS implementation of JSON serialization of BigInt and BigUint types from Rust num_bigint crate",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "TODO",
+  "license": "MIT OR GPL-3.0-or-later",
   "scripts": {
     "test": "xo && nyc ava"
   },
-  "homepage": "https://github.com/futpib/TODO",
+  "homepage": "https://github.com/futpib/bigint-serde",
   "ava": {
     "verbose": true
   },
   "devDependencies": {
     "ava": "^3.9.0",
+    "bluebird": "^3.7.2",
     "coveralls": "^3.1.0",
     "eslint-config-xo-overrides": "^1.4.0",
+    "execa": "^4.0.2",
     "nyc": "^15.1.0",
+    "random-bigint": "^0.0.1",
     "xo": "^0.32.0"
   },
   "xo": {
