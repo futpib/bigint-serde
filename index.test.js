@@ -65,7 +65,6 @@ const randomBigInt = () => {
 const concurrency = os.cpus().length;
 
 const macro = async (t, randomN, toJSON, fromJSON, rustToJSON, rustFromJSON) => {
-	t.timeout(60000);
 	await map(Array.from(new Array(256)), async (_, i) => {
 		const n = (() => {
 			if (i === 0) {

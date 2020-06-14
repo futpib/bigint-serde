@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT OR GPL-3.0-or-later",
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "xo && nyc ava --timeout=60000"
   },
   "homepage": "https://github.com/futpib/bigint-serde",
   "ava": {
