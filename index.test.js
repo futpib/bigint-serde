@@ -1,6 +1,8 @@
 
 const test = require('ava');
 
+const os = require('os');
+
 const execa = require('execa');
 
 const { map } = require('bluebird');
@@ -60,6 +62,8 @@ const randomBigInt = () => {
 	return sign * randomBigUint();
 };
 
+const concurrency = os.cpus().length;
+
 const macro = async (t, randomN, toJSON, fromJSON, rustToJSON, rustFromJSON) => {
 	t.timeout(60000);
 	await map(Array.from(new Array(256)), async (_, i) => {
@@ -80,7 +84,7 @@ const macro = async (t, randomN, toJSON, fromJSON, rustToJSON, rustFromJSON) => 
 		t.is(actualN, expectedN, 'fromJSON');
 		t.is(expectedN, n);
 	}, {
-		concurrency: 64,
+		concurrency,
 	});
 };
 
