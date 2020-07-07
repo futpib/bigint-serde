@@ -1,6 +1,6 @@
 # bigint-serde
 
-> JS implementation of JSON serialization of BigInt and BigUint types from Rust num-bigint crate
+> JS implementation of JSON serialization of BigInt and BigUint types from Rust [num-bigint crate](https://crates.io/crates/num-bigint)
 
 [![Build Status](https://travis-ci.org/futpib/bigint-serde.svg?branch=master)](https://travis-ci.org/futpib/bigint-serde) [![Coverage Status](https://coveralls.io/repos/github/futpib/bigint-serde/badge.svg?branch=master)](https://coveralls.io/github/futpib/bigint-serde?branch=master)
 
