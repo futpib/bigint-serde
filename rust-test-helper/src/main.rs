@@ -15,16 +15,16 @@ use num_bigint::{
 };
 
 use clap::{
-	Clap,
+	Parser,
 };
 
-#[derive(Clap)]
+#[derive(Parser)]
 struct Options {
 	#[clap(subcommand)]
 	subcommand: Subcommand,
 }
 
-#[derive(Clap)]
+#[derive(Parser)]
 enum Subcommand {
 	BigIntToJSON,
 	BigIntFromJSON,
