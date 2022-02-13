@@ -25,7 +25,7 @@ jobs:
       - run: |
           cargo --version
           rustc --version
-          cargo build --locked
+          cargo build
         working-directory: ./rust-test-helper
       - run: yarn install
       - run: yarn test
